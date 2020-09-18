@@ -1,0 +1,34 @@
+{
+    "name": "calculator",
+    "description": "A simple web server for a calculator software system",
+    "main": "index.js",
+    "scripts": {
+        "test": "",
+        "start": "webpack",
+        "dev": "webpack-dev-server --open",
+        "server": "babel-node src/app/server"
+    },
+    "keywords": [],
+    "author": {
+        "name": "arminro"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@babel/node": "^7.10.5",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/register": "^7.11.5",
+        "babel-loader": "^8.1.0",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "sequelize": "^6.3.5",
+        "sequelize-cli": "^6.2.0",
+        "sqlite3": "^5.0.0",
+        "webpack": "4.44.2",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "dependencies": {
+        "@types/sequelize": "^4.28.9"
+    }
+}
