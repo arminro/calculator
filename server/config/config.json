@@ -1,7 +1,8 @@
 {
   "development": {
     "dialect": "sqlite",
-    "storage": "./calculatorDb.sqlite3"
+    "storage": "./calculatorDb.sqlite3",
+    "origin" : "*"
   },
   "test": {
     "dialect": "sqlite",
