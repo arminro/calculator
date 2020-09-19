@@ -29,6 +29,8 @@
         "webpack-dev-server": "^3.11.0"
     },
     "dependencies": {
-        "@types/sequelize": "^4.28.9"
+        "@types/sequelize": "^4.28.9",
+        "express-winston": "^4.0.5",
+        "winston": "^3.3.3"
     }
 }
