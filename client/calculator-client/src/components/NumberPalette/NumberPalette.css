@@ -1,0 +1,17 @@
+
+  .number-button{
+    height: 100%;
+    width: 80%;
+  }
+
+  .op-button{
+    height: 100%;
+    width: 80%;
+  }
+  .calc{
+    border-radius: 30px !important;
+    border-style: groove; 
+    border: black;
+    font-size: xx-large !important;
+    padding: 0%;
+  }
