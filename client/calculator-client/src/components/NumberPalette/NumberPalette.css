@@ -15,3 +15,7 @@
     font-size: xx-large !important;
     padding: 0%;
   }
+
+  .hidden {
+    display: none;
+  }

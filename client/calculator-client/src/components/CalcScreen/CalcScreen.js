@@ -4,7 +4,7 @@ import './CalcScreen.css'
 class CalcScreen extends Component {
   render () {
     return (
-      <div className='App'>
+      <div className='CalcScreen'>
         <div clas='container'>
           <div class='d-flex flex-column screen'>
             <div class='p-0'>
