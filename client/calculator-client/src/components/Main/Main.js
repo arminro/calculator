@@ -197,10 +197,11 @@ class Main extends Component {
     }
 
 
-
+  // source of UI: https://codepen.io/zellwk/pen/pLgmGL
   render () {
     return (
       <div className='Main'>
+        <div class='calculator'>
         <CalcScreen screenText={this.state.calculatorText} />
         <NumberPalette comboData={this.state.comboData}
                 handleNumberClick={this.clickNumberButton}
@@ -211,6 +212,8 @@ class Main extends Component {
                 handleMemoryLoadClick={this.clickMemoryLoadButton}
                 handleComboClick={this.captureSelectedComboElement}
                 />
+      </div>
+        
       </div>
     )
   }
