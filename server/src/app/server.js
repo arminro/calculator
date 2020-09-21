@@ -1,14 +1,16 @@
 import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
+import { log } from 'console'
 
 const path = require('path')
-const port = 9999
+
 const context = require('../../models')
 const config = require(path.join(__dirname, '../../config/config.json'))
 
+const port = 9999
 const corsOptions = {
-  origin: config.origin,
+  origin: '*',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
@@ -35,7 +37,14 @@ app.use(
 )
 
 const saveOperand = (number) => {
-  return context.Operand.create(number)
+  console.log(number);
+  const numberValue = parseFloat(number.value)
+  console.log(numberValue)
+  if (isNaN(numberValue)) {
+    throw new Error('Number to be saved must be a valid float!')
+  }
+
+  return context.Operand.create(number);
 }
 
 const getOperandsForCalculation = (calcId) => {
@@ -47,6 +56,7 @@ const getOperandsForCalculation = (calcId) => {
     })
 }
 
+app.options('*', cors())
 app.post('/numbers/save', async (req, res) => {
   try {
     const number = req.body
